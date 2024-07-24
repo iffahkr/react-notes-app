@@ -1,0 +1,117 @@
+/* Small Screen */
+/* Navbar */
+.notes__navbar {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+}
+
+.navbar__title {
+  margin-top: 1rem;
+}
+
+.navbar__search {
+  width: 30%;
+}
+
+/* AddNotesForm */
+.container__form {
+  padding: 1rem;
+  margin: 0 10rem;
+}
+
+.notes__header {
+  margin-top: 1rem;
+  font-weight: normal;
+}
+
+.form__notes {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input__notes {
+  height: 200px;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.form__button {
+  height: 35px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form__button:hover {
+    color: #9c9c9c;
+}
+
+/* CardNotes */
+.container__card {
+  padding: 1rem;
+  margin: 0 5rem;
+}
+
+.card__notes {
+  border: 1px solid #fff;
+}
+
+.card__button__delete,
+.card__button__archive {
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  border: 0;
+  border-top: 1px solid #aaa;
+  padding: 8px 0;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card__button__delete {
+  border-right: 1px solid #aaa;
+  color: #ff5f52;
+}
+
+.card__button__delete:hover {
+  color: #b00020;
+}
+
+.card__button__archive:hover {
+  color: #c49000;
+}
+
+.card__button__archive {
+  color: #fff263;
+}
+
+/* Footer */
+.notes__footer {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #fff;
+}
+
+.footer__title {
+  margin-bottom: 1rem;
+}
+
+/* Medium Screen */
+@media (min-width: 768px) {
+}
+
+/* Large Screen */
+@media (min-width: 992px) {
+  .container__form {
+    padding: 1rem;
+    margin: 0 25rem;
+  }
+}
