@@ -1,4 +1,5 @@
 import React from "react";
+import { FiCheckCircle } from "react-icons/fi";
 
 class NoteInput extends React.Component {
   constructor(props) {
@@ -42,17 +43,15 @@ class NoteInput extends React.Component {
 
   render() {
     return (
-      <section className="note-app__body">
-        <h2>Buat Catatan</h2>
-        <form className="note-input" onSubmit={this.onSubmitEventHandler}>
-          <p className="note-input__title__char-limit">Sisa karakter: 50</p>
-          <input type="text" value={this.state.title} onChange={this.onTitleChangeEventHandler} placeholder="Ini adalah judul..." />
-          <textarea className="note-input__body" name="" id="" value={this.state.body} onChange={this.onBodyChangeEventHandler} placeholder="Ketikkan catatan disini..."></textarea>
-          <button className="note-input button" type="submit">
-            Buat
+      <form className="add-new-page__input" onSubmit={this.onSubmitEventHandler}>
+        <input className="add-new-page__input__title" type="text" value={this.state.title} onChange={this.onTitleChangeEventHandler} placeholder="Judul" />
+        <textarea className="add-new-page__input__body" name="" id="" value={this.state.body} onChange={this.onBodyChangeEventHandler} placeholder="Ketikkan catatan..."></textarea>
+        <div className="add-new-page__action">
+          <button className="action" type="submit" title="Simpan">
+            <FiCheckCircle />
           </button>
-        </form>
-      </section>
+        </div>
+      </form>
     );
   }
 }

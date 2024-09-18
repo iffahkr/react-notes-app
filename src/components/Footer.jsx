@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => {
+function Footer() {
     return (
         <footer className="notes__footer">
             <h3 className="footer__title">Personal Notes App</h3>

@@ -1,21 +1,22 @@
 import React from "react";
 import NotesList from "./NotesList";
 
-const ActiveNotes = ({ notes, onDelete, onArchive }) => {
+function ActiveNotes({ notes }) {
   return (
-    <div className="note-app__body">
-      <h2 className="notes__header">Catatan Aktif</h2>
+    <div className="notes-list">
       {notes.length === 0 ? (
-        <p className="notes-list__empty-message">Tidak ada catatan.</p>
+        <section className="notes-list-empty">
+          <p>Tidak ada catatan</p>
+        </section>
       ) : (
         <ul>
           {notes.map((note) => (
-            <NotesList key={note.id} id={note.id} onDelete={onDelete} onArchive={onArchive} {...note} />
+            <NotesList key={note.id} id={note.id} {...note} />
           ))}
         </ul>
       )}
     </div>
   );
-};
+}
 
 export default ActiveNotes;
