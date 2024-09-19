@@ -1,12 +1,14 @@
 import React from "react";
-import { archiveNote, deleteNote, getActiveNotes } from "../utils/local-data";
+import { archiveNote, deleteNote, getNoteById } from "../utils/local-data";
+import { showFormattedDate } from "../utils";
+import { FiArchive, FiTrash } from "react-icons/fi";
 
 class DetailPage extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      notes: getNote(id),
+      notes: getNoteById(props.id),
     };
 
     this.onDeleteHandler = this.onDeleteHandler.bind(this);
@@ -36,7 +38,7 @@ class DetailPage extends React.Component {
             <FiArchive />
           </button>
           <button className="note-item__delete-button" type="button" title="Hapus" onClick={() => this.onDeleteHandler(id)}>
-            <FiTrash2 />
+            <FiTrash />
           </button>
         </div>
       </section>

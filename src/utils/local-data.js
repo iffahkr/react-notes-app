@@ -53,6 +53,12 @@ function getNote(id) {
   return foundedNote;
 }
 
+// untuk mengambil data notes berdasarkan id
+function getNoteById(id) {
+  const detailNote = notes.filter((note) => note.id === id);
+  return detailNote;
+}
+
 // untuk mendapatkan notes aktif
 function getActiveNotes() {
   const activeNotes = notes.filter((note) => !note.archived);
@@ -117,6 +123,7 @@ export {
   deleteNote,
   editNote,
   getNote,
+  getNoteById,
   archiveNote,
   unarchiveNote,
   addNote,

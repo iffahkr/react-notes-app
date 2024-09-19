@@ -40,7 +40,7 @@ class HomePage extends React.Component {
 
   render() {
     const notes = this.state.notes.filter((note) => {
-      note.title.toLowerCase().includes(this.state.keyword.toLowerCase());
+      return note.title.toLowerCase().includes(this.state.keyword.toLowerCase());
     });
     return (
       <section>

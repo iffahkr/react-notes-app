@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import HomePageWrapper from "./pages/HomePage";
 import AddPage from "./pages/AddPage";
 import ArchivePageWrapper from "./pages/ArchivePage";
+import DetailPage from "./pages/DetailPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<HomePageWrapper />} />
             <Route path="/add" element={<AddPage />} />
             <Route path="/archives" element={<ArchivePageWrapper />} />
+            <Route path="/detail" element={<DetailPage />} />
           </Routes>
         </main>
       </div>
